@@ -5,9 +5,7 @@
   import { note, currentActive } from "../lib/component/stores";
 
   let footernote;
-  note.subscribe((note) => {
-    footernote = note;
-  });
+  note.subscribe((note) => (footernote = note));
 
   let curActive;
   currentActive.subscribe((active) => (curActive = active));
